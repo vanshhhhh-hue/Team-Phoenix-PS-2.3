@@ -8,7 +8,7 @@ Environment: Windows, Python 3.14.6, Streamlit 1.66.1. Local address: http://127
 |---|---|---|
 | `python scripts/verify.py --planning` | PASS | Required planning files exist and line limits pass |
 | `.\.venv\Scripts\python.exe -m pip check` | PASS | No broken requirements found |
-| `.\.venv\Scripts\python.exe -X utf8 scripts/verify.py` | PASS | Modules compile; 28 tests pass |
+| `.\.venv\Scripts\python.exe -X utf8 scripts/verify.py` | PASS | Modules compile; 29 tests pass |
 | `.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8501` | PASS | Server started on 127.0.0.1:8501 |
 | `Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8501/_stcore/health` | PASS | HTTP 200, response `ok` |
 
@@ -54,3 +54,7 @@ AppTest covers rendered UI logic; it does not establish visual layout or browser
 Optional live model paraphrasing is omitted without provider credentials. No live API smoke test is claimed.
 No public deployment was required or performed. No separate frontend build exists for this Streamlit app.
 Numerical regression and engineering reliability are tested; instructor validation and learning outcomes are not.
+
+Git checkpoint: initial implementation da8abbd was pushed successfully to origin/main.
+Staged whitespace check passed; credential-pattern scan found no matches.
+Final regression includes ledger transfer-answer display and hiding pending grades across navigation.

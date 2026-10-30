@@ -406,6 +406,25 @@ def render_ledger():
                     st.caption('No repair submitted; direct transfer can follow correct initial reasoning.')
                 assisted = sum(a['help_used'] for a in progress['attempts'] if a['attempt_id'] in record['attempt_ids'])
                 st.caption(f'{len(record["attempt_ids"])} recorded responses · {assisted} assisted / practice')
+            transfer_attempts = [a for a in progress['attempts'] if a['attempt_id'] in record['attempt_ids']
+                                 and a['context'] == 'transfer']
+            if transfer_attempts:
+                with st.expander('Transfer evidence', expanded=True):
+                    sessions = list(dict.fromkeys(a['session_id'] for a in transfer_attempts))
+                    for session in sessions:
+                        responses = [a for a in transfer_attempts if a['session_id'] == session]
+                        if len(responses) < 2:
+                            st.caption('One response saved. Complete both checks before viewing the outcome.')
+                            continue
+                        rows = []
+                        for attempt in responses:
+                            tq = question_by_id(content, attempt['question_id'])
+                            selected = next(o['text'] for o in tq['options'] if o['id'] == attempt['selected_option_id'])
+                            rows.append({'Check': 'Symbolic' if tq['id'] == rp['transfer_question_ids'][0] else 'Representation',
+                                         'Selected answer': selected,
+                                         'Result': 'Correct' if attempt['selected_option_id'] == tq['correct_option_id'] else 'Needs practice',
+                                         'Assistance': 'Assisted / practice' if attempt['help_used'] else 'Unassisted'})
+                        st.table(rows)
             with st.expander('Evidence timeline'):
                 for e in record['events']:
                     date = datetime.fromisoformat(e['occurred_at']).astimezone(clock().tzinfo).strftime('%d %b %Y %H:%M IST')

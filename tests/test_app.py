@@ -137,6 +137,23 @@ class AppTests(unittest.TestCase):
         with patch('socket.create_connection', side_effect=OSError('Network unavailable')):
             self.complete('distribution')
 
+    def test_ledger_hides_pending_transfer_grade_then_shows_both_answers(self):
+        at = self.app()
+        self.radio(at, 'Your answer', 'correct'); self.button(at, 'Lock prediction →')
+        self.radio(at, 'Why did you choose that answer?', 'multiply_every_term')
+        self.button(at, 'Test my reasoning →')
+        self.radio(at, 'Your answer', 'correct'); self.button(at, 'Submit check →')
+        at.radio(key='navigation').set_value('Repair Ledger').run()
+        self.assertEqual(len(at.table), 0)
+        self.assertTrue(any('Complete both checks' in c.value for c in at.caption))
+        self.button(at, 'Continue recommended action →')
+        self.assertEqual(at.session_state['navigation'], 'Transfer Challenge')
+        self.button(at, 'Next: change of representation →')
+        self.radio(at, 'Your answer', 'correct'); self.button(at, 'Submit check →')
+        self.button(at, 'Save outcome to ledger →')
+        self.assertEqual(len(at.table), 1)
+        self.assertEqual(list(at.table[0].value['Selected answer']), ['5t + 15', '4y + 12'])
+
 
 if __name__ == '__main__':
     unittest.main()
