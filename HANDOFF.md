@@ -1,26 +1,27 @@
 # Handoff
 ## Done
-Offline MVP implemented: 3 algebra families, Debug Lab, Transfer Challenge, Repair Ledger, JSON persistence.
-Authored 24 questions/6 hints; 29 core/rendered UI tests pass. README, lockfile, launcher and fallback provided.
+Phoenix Study implemented: uploads/pasted notes, Gemini/local packs, adaptive quiz/hints, heatmap/path, spaced cards.
+Root default is Study Companion; tested algebra lab is supporting. Historical lab docs preserved under docs/LAB_*.
+42 tests pass. Actual browser generation, answer/hint, insights, review, download/restore and refresh verified.
 ## Current task
-Implementation complete. Source committed and pushed to origin/main; final archive path is in the chat.
+Refined implementation complete; final Git checkpoint and source archive recorded in the chat.
 ## Files/functions being changed
-None pending. app.py UI; engine.py templates/content; workflow.py transitions; ledger.py persistence/schedules.
+None pending. app.py dispatch; study_app.py main UI; study.py domain/save; ai_provider.py Gemini.
 ## Broken/failing with exact error
-No application test failures. Desktop browser automation stopped: could not determine current browser URL.
-Browser visual review and native file-dialog behavior remain unverified; AppTest journeys pass.
+No current app/test failures. Retired model returned unavailable; gemini-flash-lite-latest works.
+An in-app browser targeting error was recovered; current browser walkthrough passes.
 ## Decisions
-Reuse installed Python 3.14.6 and Streamlit 1.66.1; no additional Python installer needed.
-No-key deterministic product; optional live paraphrase omitted because no provider credentials were supplied.
-Local demo only. Exports save evidence, not partially filled forms; explicit export needed before refresh.
+Original upload-based Study Companion controls scope, not the narrower algebra brief.
+User confirmed Gemini and authorised .env API_KEY use. Never expose or commit it.
+Actual Gemini generation produced 6 questions/6 cards/3 topics with source quotes.
+Local fallback is labelled extractive practice. Local study checkpoint is ignored .local/study.json.
 ## Commands to run
-`./.venv/Scripts/python.exe -m streamlit run app.py --server.port 8501` (already running at handoff).
-Open http://127.0.0.1:8501. Or double-click Start-Lab.cmd after setup.
-`./.venv/Scripts/python.exe scripts/verify.py`; `./.venv/Scripts/python.exe -m pip check`.
+`.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8501` or Start-Phoenix-Study.cmd.
+Open http://127.0.0.1:8501 (running at handoff). `scripts/verify.py` runs all42 tests without live API calls.
 ## Checks actually performed
-29 tests pass, including three full rendered Streamlit journeys and a forced-no-network run.
-pip check passes; modules compile; local health returns HTTP 200 / ok. See VERIFICATION.md.
-Injected-clock tests cover +1/+3/+7 days, reopening and no-op previews; import round trips and rejection pass.
+42 tests pass; pip check passes; HTTP200/ok. Actual Gemini and browser evidence in VERIFICATION.md.
+Backup download/restore and refresh retain sample data; malformed state is rejected atomically.
 ## Next exact step
-Use the running app and follow README.md's two-minute demo; export before resetting or refreshing.
-No remaining required implementation task. A human browser visual/file-dialog review is still useful.
+Use Library to upload the owner's actual course notes and take a quiz. No additional start permission needed.
+Current saved demo is authored Cell Energy material plus one deliberate QA answer/review.
+Teacher dashboard, OCR and public deployment remain outside current implemented scope.

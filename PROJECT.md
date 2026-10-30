@@ -1,58 +1,56 @@
-# Misconception Lab
+# Phoenix Study - AI Study Companion
 Repository: https://github.com/vanshhhhh-hue/Team-Phoenix-PS-2.3.git
-One owner and active agent, one PC, one checkout. No integration repository or stage.
+One owner, one PC, one checkout. This replaces the lab-only product scope.
 
-## Problem and solution
-Students can repeat a faulty algebra rule despite seeing a correct answer.
-Let a student select a rule, expose its failure numerically, repair it, and try new problems.
-Target: students practising elementary algebra; a single-student local hackathon demo.
-Pitch: Find the rule behind your mistake. Test it. Repair it. Check it on a new problem.
+## Original problem and product
+Students receive the same lecture pace despite different gaps; generic chat gives answers too quickly.
+Build personalised study from uploaded notes: quizzes, Socratic hints, flashcards and weak-topic feedback.
+Users: school/college students. Coaching/teacher views are possible later; teacher dashboard is a bonus.
+Original statement: parent prompts/research-to-build-prompt.md, section A.
+The narrowed misconception-lab brief is a supporting-module specification, not the product boundary.
 
-## Two-minute demo
-1. Debug Lab: choose 3x+2 for 3(x+2), then “multiply only the first term”; record a candidate.
-2. Predict agreement and run the bench. Search may pick x=0; manually choose x=1 to show 9 versus 5.
-3. Change x and observe computed results; select the correct rule and structured explanation.
-4. Verify repair at three values; open Transfer Challenge and answer new symbolic and area items.
-5. Repair Ledger shows original rule, counterexample, repair, assistance, transfer and next-day review.
-6. Export progress, reset demo, import it and recover the same evidence and schedule.
+## Main screens and demo
+1. Dashboard: see study material, due cards and recommended next actions.
+2. Library: upload a text-based PDF/TXT/MD or paste notes; create a titled study pack.
+3. Verify its summary, source excerpts, topics, questions and cards came from the uploaded material.
+4. Quiz: answer new items, request up to two hints, then see grading, explanation and quoted source.
+5. Insights: view topic correctness and assistance; repeat practice without inflating first-response analytics.
+6. Revision: recall a flashcard, reveal it and rate recall to schedule the next review.
+7. Reload: locally saved study material, answers and schedules remain; export/import a study backup.
+8. Optional supporting module: open the authored algebra Misconception Lab, then return to the main app.
 
 ## Scope
-- MUST: Debug Lab, Transfer Challenge, Repair Ledger; no-key mode labelled Built-in rule engine.
-- MUST: distribution first, then square-of-sum and negative-bracket packs through the same UI.
-- MUST: ambiguous-evidence probe, Cause unclear, correct-answer route, two hints and worked explanation.
-- MUST: two unassisted transfer checks; assisted work cannot pass the unassisted gate.
-- MUST: deduplicated attempts, explicit transitions, review scheduling, validated JSON export/import, reset.
-- SHOULD: concise presentation and an explicitly labelled future-review preview.
-- CUT-FIRST: optional model paraphrase, visual polish, then additional families if schedule forces a partial MVP.
-- EXCLUDE: arbitrary notes/PDF ingestion, chatbot, accounts, database, analytics, free-text equation parsing.
+- MUST: material upload/pasted notes, library and transparent extraction limits.
+- MUST: Gemini-generated source-grounded MCQs, hints, explanations, topics and flashcards when API works.
+- MUST: automatic labelled local extractive fallback when key/service/content validation fails.
+- MUST: adaptive question selection, saved attempts, weak-topic heatmap and recommended learning path.
+- MUST: due flashcards with explicit recall scheduling; persistent local study state and backup restore.
+- MUST: retain tested algebra lab as a supporting workspace, not default home or only content source.
+- SHOULD: concise, responsive dashboard and source-evidence inspection.
+- BONUS / CUT-FIRST: teacher/class dashboard, OCR, accounts, embeddings infrastructure, public deployment.
 
-## Stack and planned structure
-Python 3.14.6 + Streamlit 1.66.1: one process for UI/domain functions, no bespoke HTTP API.
-Built-in json/datetime/unittest: no paid service or GPU; explicit progress export is persistence.
-Root: app.py, engine.py, workflow.py, ledger.py; data/packs.json; tests/test_core.py.
-Optional llm_adapter.py only after offline completion and usable credentials.
-Docs at root; prompts/FULLSTACK_AGENT.md; scripts/verify.py.
-Implementation present: all four Python modules, 3 packs, 24 questions, 6 hints, core/UI tests, README.
+## Implementation and commands
+Python 3.14.6, Streamlit 1.66.1 and pypdf 6.21.4; one process, no separate REST backend.
+app.py dispatches study_app.py (default) and lab_app.py (supporting lab).
+study.py handles sources, adaptive quizzes, cards and atomic local persistence.
+ai_provider.py sends selected excerpts only to Gemini via its official HTTPS endpoint.
+Existing engine.py/workflow.py/ledger.py and data/packs.json continue powering the lab.
+data/demo-notes.md is an original biology sample; tests/ covers study and lab flows.
+Private runtime data: .local/study.json (ignored); credentials: .env (ignored).
+Setup: `python -m venv .venv`; `.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt`.
+Run: `.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8501`.
+Open http://127.0.0.1:8501; use Start-Lab.cmd as the retained launcher filename.
+Verify: `.\.venv\Scripts\python.exe scripts/verify.py`; `.\.venv\Scripts\python.exe -m pip check`.
+Environment: GEMINI_API_KEY (or existing API_KEY); optional GEMINI_MODEL.
+Live model tested: gemini-flash-lite-latest. No browser-side key or credentials in exports.
 
-## Local commands (PowerShell, from repository root)
-Tools: Git, Python 3.14.6 (already installed and tested), browser.
-Create environment if needed: `python -m venv .venv`
-Install: `.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt`
-Start: `.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8501`
-Open http://localhost:8501; UI and domain logic run in the same Streamlit process.
-Verify: `.\.venv\Scripts\python.exe scripts/verify.py` (no running server required).
-Health while running: `Invoke-WebRequest http://localhost:8501/_stcore/health`
-No separate frontend build. Verification includes compile, core tests and recorded browser walkthrough.
-Required environment variables: none. Optional provider variables are deferred until a provider is chosen.
-
-## Decisions and assumptions
-[planning] Use the later algebra build brief over the earlier probability research prototype.
-[planning] Seven implementation hours, feature freeze at six; supersedes generic ten-hour template.
-[planning] Local demo sufficient unless official requirements establish deployment or live AI obligations.
-[planning] No account or automatic durable storage; session state plus explicit JSON export/import.
-[planning] Evidence labels describe this check only; no mastery, proven retention or novelty claims.
-[planning] Official judging weights, compulsory uploads/live AI and submission rules remain unverified.
-[planning] Numerical first counterexample follows [0,1,-1,2,-2,3,-3], not a forced x=1.
-[implementation] Streamlit 1.66.1 installed and tested on Python 3.14.6; dependencies locked after pip check.
-[implementation] Optional AI omitted without credentials; no-key functionality is complete.
-[implementation] Browser safety automation could not establish URL; AppTest UI journeys and health are verified.
+## Decisions and limits
+[refinement] The owner's correction restores the original uploaded-material study product.
+[refinement] User authorised Gemini using the existing .env and a local fallback if it fails.
+[refinement] Live generation returned six grounded questions, six cards and three topics on biology notes.
+[refinement] Local fallback is extractive recall practice, not a local LLM or equivalent-quality AI tutoring.
+[refinement] PDF limit 10 MB / 60 pages; extracted text limit 100,000 characters; no OCR.
+[refinement] A bare syllabus cannot support explanations it does not contain; add teaching notes for grounded quizzes.
+[refinement] Adaptive selection and spacing are transparent heuristics, not validated cognitive models.
+[refinement] Local study state persists across refresh; the legacy lab retains its separate export/session behavior.
+[refinement] No public URL requirement has been established; preserve the local-only deployment decision.

@@ -19,6 +19,7 @@ pillow==13.0.0
 protobuf==7.36.2
 pyarrow==26.0.0
 pydeck==0.9.3
+pypdf==6.21.4
 python-dateutil==3.0.0
 python-multipart==0.0.32
 referencing==0.37.0

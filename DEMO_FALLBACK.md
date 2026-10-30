@@ -1,8 +1,8 @@
-# Local demo fallback
-1. From this checkout use Python 3.14.6; `.venv` is already installed on this PC.
-2. Fresh PC: `python -m venv .venv`; `.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt`.
-3. `.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8501`.
-4. Open http://localhost:8501 and use built-in rule engine mode; no model API needed.
-5. Follow PROJECT.md demo actions; export progress before resetting or refreshing.
-6. Dependencies must already be installed for disconnected startup.
-7. Browser recording/screenshots: not created; core and rendered UI test evidence is in VERIFICATION.md.
+# Local fallback
+1. In this checkout run `.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8501`.
+2. Open http://127.0.0.1:8501 or double-click Start-Phoenix-Study.cmd after setup.
+3. Turn off Use Gemini when available; upload/paste explanatory notes or use data/demo-notes.md.
+4. Complete the local extractive quiz, inspect Insights and review a card; label it local practice.
+5. Study data saves to .local/study.json; export a study backup for another local restore.
+6. The separate authored algebra lab remains available from the sidebar without internet.
+7. Dependencies must be installed before disconnecting; screenshots/recording are not prepared.

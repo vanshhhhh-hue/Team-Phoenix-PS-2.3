@@ -1,60 +1,62 @@
-# Verification evidence — 30 October 2026
+# Verification - Phoenix Study refinement, 30 October 2026
 
-Environment: Windows, Python 3.14.6, Streamlit 1.66.1. Local address: http://127.0.0.1:8501.
+Environment: Windows, Python3.14.6, Streamlit1.66.1, pypdf6.21.4.
+The earlier algebra-only checkpoint is archived at docs/LAB_VERIFICATION.md.
 
-## Executed checks
+## Automated checks actually executed
 
-| Check | Result | Observed evidence |
+| Check | Result | Evidence |
 |---|---|---|
-| `python scripts/verify.py --planning` | PASS | Required planning files exist and line limits pass |
-| `.\.venv\Scripts\python.exe -m pip check` | PASS | No broken requirements found |
-| `.\.venv\Scripts\python.exe -X utf8 scripts/verify.py` | PASS | Modules compile; 29 tests pass |
-| `.\.venv\Scripts\python.exe -m streamlit run app.py --server.port 8501` | PASS | Server started on 127.0.0.1:8501 |
-| `Invoke-WebRequest -UseBasicParsing http://127.0.0.1:8501/_stcore/health` | PASS | HTTP 200, response `ok` |
+| scripts/verify.py | PASS | All application modules compile; 42 tests pass |
+| pip check | PASS | No broken requirements found |
+| Planning check | PASS | Required files exist and line limits pass |
+| Streamlit startup | PASS | Server starts on 127.0.0.1:8501 with new 10 MB upload limit |
+| HTTP health | PASS | 200 and ok using Invoke-WebRequest -UseBasicParsing |
 
-The first PowerShell health attempt without `-UseBasicParsing` failed inside Windows PowerShell's
-HTML parser (`Object reference not set to an instance of an object`). The corrected command above succeeds.
-Streamlit AppTest reports the documented bare-mode `missing ScriptRunContext` warning; no app exceptions occurred.
+New tests exercise real PDF extraction, bad/encrypted/empty inputs, source citations, duplicate uploads,
+AI provider/content failure fallback, deterministic grading, atomic submissions, unseen-first selection,
+first-response-only analytics, revision scheduling, early-review rejection and atomic backup validation.
+A rendered Streamlit journey covers pasted notes -> library -> five-item quiz -> hint/explanations
+-> topic insights -> card reveal -> rating. Root app navigation enters/exits the supporting lab.
+All 29 original algebra tests remain passing. Unit tests do not spend live API quota.
+Expected warnings: Streamlit bare-mode ScriptRunContext warnings and pypdf's malformed-fixture warning.
 
-## Connected demo journey
+## Live Gemini checks actually executed
 
-These observations come from Streamlit's actual application script and rendered-widget AppTest API,
-not a custom mocked UI. Test: `test_complete_actual_ui_all_families`.
+The owner supplied the ignored .env key and confirmed Google Gemini / AI Studio.
+Models endpoint authentication succeeded. gemini-2.5-flash-lite generation returned unavailable;
+gemini-flash-lite-latest then succeeded and is the configured default.
+A structured generation from the authored biology sample produced six questions, six cards and three
+topics: Photosynthesis, Cellular Respiration, Transport Across Membranes. Verbatim evidence checks passed.
+Only sanitised connection status/counts were printed. No key or raw provider error body was displayed.
+Source quoting and JSON validation do not establish semantic answer correctness.
 
-| PROJECT action | Result | Observation |
+## Actual in-app browser observations
+
+| Action | Result | Observed behavior |
 |---|---|---|
-| Select faulty answer and reason | PASS | Distribution advances through locked prediction to rule test |
-| Run x=1 counterexample | PASS | Distribution 9 vs 5; square 9 vs 5; negative bracket -3 vs 1 |
-| Change numerical input | PASS | Slider x=2 changes displayed metric values through evaluators |
-| Submit repaired rule and explanation | PASS | REPAIR_VERIFIED and three numerical regression checks |
-| Two unseen transfer checks | PASS | First correctness withheld; both correct unassisted -> transfer_passed |
-| Open ledger and schedule review | PASS | Navigation reaches ledger; next check = submission time + 1 day |
-| Export and restore | PASS (domain boundary) | Exact JSON round-trip for all three families; malformed data rejected |
-| Reset demo | PASS (rendered UI) | Clears evidence, returns to PREDICT |
-| Browser download/upload dialog | UNVERIFIED | Native browser walkthrough unavailable; import/export functions tested |
+| Open main app | PASS | Phoenix Study dashboard with five main destinations; lab is supporting |
+| Build sample using Gemini | PASS | Library displays Gemini generated, six questions, three source sections |
+| Request quiz hint | PASS | Leading hint appears without revealing grading |
+| Submit an incorrect answer | PASS | Reviewed answer and verbatim source explanation shown; one hint recorded |
+| Open Insights | PASS | Photosynthesis 0/1 first responses correct, one assisted; other topics unseen |
+| Recall/reveal/rate flashcard | PASS | Good removes it from due queue: six due becomes five |
+| Download backup | PASS | Browser downloaded phoenix-study-backup.json, approximately14 KB |
+| Upload downloaded backup and restore | PASS | Dashboard retains one document, one response and five due cards |
+| Refresh browser | PASS | Same saved counts recovered from local persistence |
+| Actual material upload | PASS | File chooser accepted demo-notes.md; processing detected duplicate and preserved progress |
+| Dashboard layout | PASS with adjustment | Narrow preview prompted two-column metrics and topic tiles |
 
-## Additional tests
-
-- Correct-answer path, conflicting answer/reason, unclear evidence, guided example and corroborating probe.
-- Duplicate submit no-op, stale token rejection, atomic validation and preservation of partial state on navigation.
-- Correct repair requires both rule and explanation; hint cap and help-use recording.
-- Symbolic failure, representation failure, assisted transfer, and already-seen transfer treated as practice.
-- Due review: answer plus reason required; +3 then +7 day schedule using injected clocks.
-- Failed or assisted delayed review reopens while preserving history; recommendation prioritizes it.
-- Future preview does not mutate evidence and does not reveal the actual delayed question.
-- Import rejects bad versions, unknown IDs, duplicate attempts, invalid times/types, inconsistent links,
-  fabricated numerical counterexamples, absent schedules and oversized files.
-- A full rendered UI journey succeeds while `socket.create_connection` is forced to fail.
+Browser control is now working through the in-app browser; the previous desktop URL-identification issue
+belongs to the historical lab checkpoint. A targeting error during upload QA was recovered by re-reading
+the page and using the current semantic control; the successful duplicate-upload outcome was observed.
+Preview saved at C:/Users/VICTUS/Desktop/MNIT/Phoenix-Study-preview.png (outside the source repository).
+Local demo data is the authored biology sample and one deliberate QA response/review, not real learner results.
 
 ## Limits
 
-Desktop Computer Use stopped because it could not reliably establish the current browser URL.
-No manual browser visual pass, screenshot, recording, or real browser file-dialog test is claimed.
-AppTest covers rendered UI logic; it does not establish visual layout or browser-download behavior.
-Optional live model paraphrasing is omitted without provider credentials. No live API smoke test is claimed.
-No public deployment was required or performed. No separate frontend build exists for this Streamlit app.
-Numerical regression and engineering reliability are tested; instructor validation and learning outcomes are not.
-
-Git checkpoint: initial implementation da8abbd was pushed successfully to origin/main.
-Staged whitespace check passed; credential-pattern scan found no matches.
-Final regression includes ledger transfer-answer display and hiding pending grades across navigation.
+No public deployment, OCR, account isolation, teacher/class dashboard or embeddings service is claimed.
+Syllabus-only headings cannot support missing teaching explanations; source-based study needs explanatory material.
+Local fallback provides extractive recall, not a local LLM. No learning-efficacy or diagnostic-validity claim.
+Adaptive selection and spacing are transparent prototype heuristics. The main workspace persists locally;
+the supporting legacy lab still uses its original separate export/session boundary.

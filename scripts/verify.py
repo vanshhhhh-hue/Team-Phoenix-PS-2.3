@@ -33,14 +33,16 @@ def main():
     if args.planning:
         print('Application behavior NOT checked (--planning).')
         return 0
-    for name in ['app.py', 'engine.py', 'workflow.py', 'ledger.py', 'data/packs.json',
-                 'requirements.txt', 'tests/test_core.py']:
+    modules = ['app.py', 'study_app.py', 'study.py', 'ai_provider.py', 'lab_app.py',
+               'engine.py', 'workflow.py', 'ledger.py']
+    for name in [*modules, 'data/packs.json', 'data/demo-notes.md', 'requirements.txt',
+                 'tests/test_core.py', 'tests/test_study.py', 'tests/test_study_app.py']:
         if not (ROOT / name).is_file():
             problems.append(f'Missing implementation: {name}')
     if problems:
         print('\n'.join(problems))
         return 1
-    for name in ['app.py', 'engine.py', 'workflow.py', 'ledger.py', 'tests']:
+    for name in [*modules, 'tests']:
         path = ROOT / name
         compiled = (compileall.compile_dir(path, quiet=1) if path.is_dir()
                     else compileall.compile_file(path, quiet=1))
