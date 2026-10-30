@@ -1,0 +1,661 @@
+{
+  "schema_version": 1,
+  "packs": [
+    {
+      "id": "distribution",
+      "title": "Distribute to every term",
+      "subtitle": "Does the outside factor reach every term?",
+      "parameters": {
+        "a": 3,
+        "b": 2
+      },
+      "original_template_id": "distribution_original",
+      "faulty_rule_id": "multiply_first_only",
+      "correct_rule_id": "multiply_every_term",
+      "diagnostic_question_id": "dist_1",
+      "reason_options": [
+        {
+          "id": "multiply_first_only",
+          "text": "Multiply only the first term inside the bracket."
+        },
+        {
+          "id": "multiply_every_term",
+          "text": "Multiply every term inside the bracket."
+        },
+        {
+          "id": "unsure",
+          "text": "I guessed / used another reason"
+        }
+      ],
+      "probe_question_id": "dist_2",
+      "canonical_explanation": "The outside factor multiplies every term inside the bracket. In 3(x+2), three groups of x+2 contain 3x and 6, so the expansion is 3x+6.",
+      "hint_ids": [
+        "dist_hint1",
+        "dist_hint2"
+      ],
+      "repair_question_id": "dist_3",
+      "transfer_question_ids": [
+        "dist_4",
+        "dist_5"
+      ],
+      "delayed_question_ids": [
+        "dist_6",
+        "dist_7",
+        "dist_8"
+      ],
+      "original_latex": "3(x+2)",
+      "faulty_latex": "3x+2",
+      "correct_latex": "3x+6",
+      "faulty_rule_latex": "a(x+b)\\to ax+b",
+      "correct_rule_latex": "a(x+b)\\to ax+ab",
+      "repair_reason": "The outside factor multiplies every term."
+    },
+    {
+      "id": "square",
+      "title": "Keep the cross term",
+      "subtitle": "What happens when both brackets multiply?",
+      "parameters": {
+        "b": 2
+      },
+      "original_template_id": "square_original",
+      "faulty_rule_id": "square_terms_only",
+      "correct_rule_id": "include_cross_term",
+      "diagnostic_question_id": "sq_1",
+      "reason_options": [
+        {
+          "id": "square_terms_only",
+          "text": "Square each term and add; there is no cross term."
+        },
+        {
+          "id": "include_cross_term",
+          "text": "Multiply both brackets, including the two cross products."
+        },
+        {
+          "id": "unsure",
+          "text": "I guessed / used another reason"
+        }
+      ],
+      "probe_question_id": "sq_2",
+      "canonical_explanation": "A square of a sum means (x+b)(x+b). Multiplication gives x squared, two copies of bx, and b squared. For b=2 the missing cross term is 4x.",
+      "hint_ids": [
+        "sq_hint1",
+        "sq_hint2"
+      ],
+      "repair_question_id": "sq_3",
+      "transfer_question_ids": [
+        "sq_4",
+        "sq_5"
+      ],
+      "delayed_question_ids": [
+        "sq_6",
+        "sq_7",
+        "sq_8"
+      ],
+      "original_latex": "(x+2)^2",
+      "faulty_latex": "x^2+4",
+      "correct_latex": "x^2+4x+4",
+      "faulty_rule_latex": "(x+b)^2\\to x^2+b^2",
+      "correct_rule_latex": "(x+b)^2\\to x^2+2bx+b^2",
+      "repair_reason": "Both cross products must be included."
+    },
+    {
+      "id": "negative",
+      "title": "Negate the whole bracket",
+      "subtitle": "Does the minus sign reach both terms?",
+      "parameters": {
+        "b": 2
+      },
+      "original_template_id": "negative_original",
+      "faulty_rule_id": "negate_first_only",
+      "correct_rule_id": "negate_every_term",
+      "diagnostic_question_id": "neg_1",
+      "reason_options": [
+        {
+          "id": "negate_first_only",
+          "text": "Change the sign of only the first term."
+        },
+        {
+          "id": "negate_every_term",
+          "text": "Multiply every term in the bracket by negative one."
+        },
+        {
+          "id": "unsure",
+          "text": "I guessed / used another reason"
+        }
+      ],
+      "probe_question_id": "neg_2",
+      "canonical_explanation": "A minus sign outside a bracket multiplies the whole bracket by -1. Both terms change sign, so -(x+2) becomes -x-2.",
+      "hint_ids": [
+        "neg_hint1",
+        "neg_hint2"
+      ],
+      "repair_question_id": "neg_3",
+      "transfer_question_ids": [
+        "neg_4",
+        "neg_5"
+      ],
+      "delayed_question_ids": [
+        "neg_6",
+        "neg_7",
+        "neg_8"
+      ],
+      "original_latex": "-(x+2)",
+      "faulty_latex": "-x+2",
+      "correct_latex": "-x-2",
+      "faulty_rule_latex": "-(x+b)\\to -x+b",
+      "correct_rule_latex": "-(x+b)\\to -x-b",
+      "repair_reason": "Every term is multiplied by negative one."
+    }
+  ],
+  "questions": [
+    {
+      "id": "dist_1",
+      "role": "diagnostic",
+      "prompt": "Choose an equivalent expression.",
+      "options": [
+        {
+          "id": "correct",
+          "text": "3x + 6"
+        },
+        {
+          "id": "multiply_first_only",
+          "text": "3x + 2"
+        },
+        {
+          "id": "other",
+          "text": "x + 6"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "3(x+2)"
+    },
+    {
+      "id": "dist_2",
+      "role": "probe",
+      "prompt": "A second example: which expansion follows your rule?",
+      "options": [
+        {
+          "id": "multiply_first_only",
+          "text": "2y + 4"
+        },
+        {
+          "id": "other",
+          "text": "y + 8"
+        },
+        {
+          "id": "correct",
+          "text": "2y + 8"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "2(y+4)"
+    },
+    {
+      "id": "dist_3",
+      "role": "repair",
+      "prompt": "Choose the repaired general rule.",
+      "options": [
+        {
+          "id": "multiply_first_only",
+          "text": "a(x+b) = ax+b"
+        },
+        {
+          "id": "multiply_every_term",
+          "text": "a(x+b) = ax+ab"
+        }
+      ],
+      "correct_option_id": "multiply_every_term"
+    },
+    {
+      "id": "dist_4",
+      "role": "transfer",
+      "prompt": "New numbers: choose the equivalent expression.",
+      "options": [
+        {
+          "id": "other",
+          "text": "5t + 3"
+        },
+        {
+          "id": "correct",
+          "text": "5t + 15"
+        },
+        {
+          "id": "other2",
+          "text": "t + 15"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "5(t+3)"
+    },
+    {
+      "id": "dist_5",
+      "role": "transfer",
+      "prompt": "A rectangle has height 4 and width y+3. What is its total area?",
+      "options": [
+        {
+          "id": "other",
+          "text": "4y + 3"
+        },
+        {
+          "id": "other2",
+          "text": "y + 12"
+        },
+        {
+          "id": "correct",
+          "text": "4y + 12"
+        }
+      ],
+      "correct_option_id": "correct"
+    },
+    {
+      "id": "dist_6",
+      "role": "delayed",
+      "prompt": "Delayed check: expand this new expression.",
+      "options": [
+        {
+          "id": "correct",
+          "text": "2z + 10"
+        },
+        {
+          "id": "other",
+          "text": "2z + 5"
+        },
+        {
+          "id": "other2",
+          "text": "z + 10"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "2(z+5)"
+    },
+    {
+      "id": "dist_7",
+      "role": "delayed",
+      "prompt": "A row has 3 boxes. Each holds k+4 beads. How many beads are there?",
+      "options": [
+        {
+          "id": "other",
+          "text": "3k + 4"
+        },
+        {
+          "id": "correct",
+          "text": "3k + 12"
+        },
+        {
+          "id": "other2",
+          "text": "k + 12"
+        }
+      ],
+      "correct_option_id": "correct"
+    },
+    {
+      "id": "dist_8",
+      "role": "delayed",
+      "prompt": "Delayed check: distribute a negative factor.",
+      "options": [
+        {
+          "id": "other",
+          "text": "-2w + 3"
+        },
+        {
+          "id": "other2",
+          "text": "-2w + 6"
+        },
+        {
+          "id": "correct",
+          "text": "-2w - 6"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "-2(w+3)"
+    },
+    {
+      "id": "sq_1",
+      "role": "diagnostic",
+      "prompt": "Choose an equivalent expression.",
+      "options": [
+        {
+          "id": "square_terms_only",
+          "text": "x^2 + 4"
+        },
+        {
+          "id": "correct",
+          "text": "x^2 + 4x + 4"
+        },
+        {
+          "id": "other",
+          "text": "x^2 + 2x + 4"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "(x+2)^2"
+    },
+    {
+      "id": "sq_2",
+      "role": "probe",
+      "prompt": "A second example: which expansion follows your rule?",
+      "options": [
+        {
+          "id": "correct",
+          "text": "y^2 + 6y + 9"
+        },
+        {
+          "id": "square_terms_only",
+          "text": "y^2 + 9"
+        },
+        {
+          "id": "other",
+          "text": "y^2 + 3y + 9"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "(y+3)^2"
+    },
+    {
+      "id": "sq_3",
+      "role": "repair",
+      "prompt": "Choose the repaired general rule.",
+      "options": [
+        {
+          "id": "square_terms_only",
+          "text": "(x+b)^2 = x^2+b^2"
+        },
+        {
+          "id": "include_cross_term",
+          "text": "(x+b)^2 = x^2+2bx+b^2"
+        }
+      ],
+      "correct_option_id": "include_cross_term"
+    },
+    {
+      "id": "sq_4",
+      "role": "transfer",
+      "prompt": "New numbers: expand this square.",
+      "options": [
+        {
+          "id": "other",
+          "text": "t^2 + 16"
+        },
+        {
+          "id": "other2",
+          "text": "t^2 + 4t + 16"
+        },
+        {
+          "id": "correct",
+          "text": "t^2 + 8t + 16"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "(t+4)^2"
+    },
+    {
+      "id": "sq_5",
+      "role": "transfer",
+      "prompt": "A square has side y+3. What is its area?",
+      "options": [
+        {
+          "id": "correct",
+          "text": "y^2 + 6y + 9"
+        },
+        {
+          "id": "other",
+          "text": "y^2 + 9"
+        },
+        {
+          "id": "other2",
+          "text": "y^2 + 3y + 9"
+        }
+      ],
+      "correct_option_id": "correct"
+    },
+    {
+      "id": "sq_6",
+      "role": "delayed",
+      "prompt": "Delayed check: expand the square.",
+      "options": [
+        {
+          "id": "other",
+          "text": "z^2 + 1"
+        },
+        {
+          "id": "correct",
+          "text": "z^2 + 2z + 1"
+        },
+        {
+          "id": "other2",
+          "text": "z^2 + z + 1"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "(z+1)^2"
+    },
+    {
+      "id": "sq_7",
+      "role": "delayed",
+      "prompt": "A square has side k+5. Choose its area.",
+      "options": [
+        {
+          "id": "other",
+          "text": "k^2 + 25"
+        },
+        {
+          "id": "correct",
+          "text": "k^2 + 10k + 25"
+        },
+        {
+          "id": "other2",
+          "text": "k^2 + 5k + 25"
+        }
+      ],
+      "correct_option_id": "correct"
+    },
+    {
+      "id": "sq_8",
+      "role": "delayed",
+      "prompt": "Delayed check: expand a difference squared.",
+      "options": [
+        {
+          "id": "correct",
+          "text": "w^2 - 4w + 4"
+        },
+        {
+          "id": "other",
+          "text": "w^2 + 4"
+        },
+        {
+          "id": "other2",
+          "text": "w^2 - 4"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "(w-2)^2"
+    },
+    {
+      "id": "neg_1",
+      "role": "diagnostic",
+      "prompt": "Choose an equivalent expression.",
+      "options": [
+        {
+          "id": "correct",
+          "text": "-x - 2"
+        },
+        {
+          "id": "negate_first_only",
+          "text": "-x + 2"
+        },
+        {
+          "id": "other",
+          "text": "x - 2"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "-(x+2)"
+    },
+    {
+      "id": "neg_2",
+      "role": "probe",
+      "prompt": "A second example: which expansion follows your rule?",
+      "options": [
+        {
+          "id": "negate_first_only",
+          "text": "-y + 4"
+        },
+        {
+          "id": "correct",
+          "text": "-y - 4"
+        },
+        {
+          "id": "other",
+          "text": "y - 4"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "-(y+4)"
+    },
+    {
+      "id": "neg_3",
+      "role": "repair",
+      "prompt": "Choose the repaired general rule.",
+      "options": [
+        {
+          "id": "negate_first_only",
+          "text": "-(x+b) = -x+b"
+        },
+        {
+          "id": "negate_every_term",
+          "text": "-(x+b) = -x-b"
+        }
+      ],
+      "correct_option_id": "negate_every_term"
+    },
+    {
+      "id": "neg_4",
+      "role": "transfer",
+      "prompt": "New numbers: remove the bracket.",
+      "options": [
+        {
+          "id": "other",
+          "text": "-t + 5"
+        },
+        {
+          "id": "correct",
+          "text": "-t - 5"
+        },
+        {
+          "id": "other2",
+          "text": "t - 5"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "-(t+5)"
+    },
+    {
+      "id": "neg_5",
+      "role": "transfer",
+      "prompt": "A balance is reduced by a combined charge of y+3. What is the change to the balance?",
+      "options": [
+        {
+          "id": "other",
+          "text": "-y + 3"
+        },
+        {
+          "id": "other2",
+          "text": "y - 3"
+        },
+        {
+          "id": "correct",
+          "text": "-y - 3"
+        }
+      ],
+      "correct_option_id": "correct"
+    },
+    {
+      "id": "neg_6",
+      "role": "delayed",
+      "prompt": "Delayed check: remove the bracket.",
+      "options": [
+        {
+          "id": "correct",
+          "text": "-z - 1"
+        },
+        {
+          "id": "other",
+          "text": "-z + 1"
+        },
+        {
+          "id": "other2",
+          "text": "z - 1"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "-(z+1)"
+    },
+    {
+      "id": "neg_7",
+      "role": "delayed",
+      "prompt": "The opposite of a total k+5 is added to a balance. What is added?",
+      "options": [
+        {
+          "id": "other",
+          "text": "-k + 5"
+        },
+        {
+          "id": "correct",
+          "text": "-k - 5"
+        },
+        {
+          "id": "other2",
+          "text": "k - 5"
+        }
+      ],
+      "correct_option_id": "correct"
+    },
+    {
+      "id": "neg_8",
+      "role": "delayed",
+      "prompt": "Delayed check: remove this bracket carefully.",
+      "options": [
+        {
+          "id": "other",
+          "text": "-w - 3"
+        },
+        {
+          "id": "other2",
+          "text": "w + 3"
+        },
+        {
+          "id": "correct",
+          "text": "-w + 3"
+        }
+      ],
+      "correct_option_id": "correct",
+      "latex": "-(w-3)"
+    }
+  ],
+  "hints": [
+    {
+      "id": "dist_hint1",
+      "text": "Think of the bracket as one group, repeated three times."
+    },
+    {
+      "id": "dist_hint2",
+      "text": "Write (x+2)+(x+2)+(x+2). Count all the twos."
+    },
+    {
+      "id": "sq_hint1",
+      "text": "A square means multiplying the whole bracket by itself."
+    },
+    {
+      "id": "sq_hint2",
+      "text": "List four products: x times x, x times b, b times x, and b times b."
+    },
+    {
+      "id": "neg_hint1",
+      "text": "The minus sign outside is a factor of negative one."
+    },
+    {
+      "id": "neg_hint2",
+      "text": "Multiply -1 by x and also by 2. What are the two signs?"
+    }
+  ]
+}
