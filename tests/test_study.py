@@ -13,7 +13,7 @@ from study import (add_document, answer_question, build_pack, export_state, extr
                    recommendations, save_state, start_quiz, topic_stats, validate_state)
 from test_core import NOW
 
-SAMPLE = (Path(__file__).resolve().parents[1] / 'data/demo-notes.md').read_bytes()
+SAMPLE = (Path(__file__).resolve().parents[1] / 'samples/users/user-1/demo-notes.md').read_bytes()
 
 
 def sample_state():
@@ -97,7 +97,8 @@ class StudyTests(unittest.TestCase):
         self.assertFalse(state['attempts'])
         answered = answer_question(state, qid, question_id, q['correct_index'], 1, 'submit', NOW)
         self.assertTrue(answered['attempts'][0]['correct'])
-        self.assertEqual(answered, answer_question(answered, qid, question_id, 0, 0, 'submit', NOW))
+        self.assertEqual(answered, answer_question(answered, qid, question_id, q['correct_index'], 1, 'submit', NOW))
+        with self.assertRaisesRegex(DomainError,'reused'):answer_question(answered,qid,question_id,(q['correct_index']+1)%4,1,'submit',NOW)
         self.assertEqual(import_state(export_state(answered)), answered)
 
     def test_adaptive_selection_prioritizes_unseen_and_does_not_inflate_heatmap(self):
@@ -132,7 +133,7 @@ class StudyTests(unittest.TestCase):
         state = sample_state()
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / 'study.json'
-            save_state(state, path)
+            state = save_state(state, path)
             self.assertEqual(load_state(path), state)
             mutated = deepcopy(state); mutated['documents'][0]['questions'][0]['correct_index'] = True
             with self.assertRaises(DomainError):

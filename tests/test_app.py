@@ -11,7 +11,7 @@ from engine import load_packs, pack_by_id
 from ledger import export_progress, import_progress
 from test_core import Journey, NOW
 
-APP = Path(__file__).resolve().parents[1] / 'lab_app.py'
+APP = Path(__file__).resolve().parents[1] / 'src' / 'phoenix' / 'lab_app.py'
 
 
 class AppTests(unittest.TestCase):

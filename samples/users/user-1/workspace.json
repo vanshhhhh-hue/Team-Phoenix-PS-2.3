@@ -1,0 +1,814 @@
+{
+  "schema_version": 6,
+  "workspace_id": "36b85f1e-dfa2-49cf-9801-a2cb3d9049ad",
+  "revision": 0,
+  "last_saved_at": null,
+  "material_meta": {
+    "f0aee84a0c1ad096280d81c8": {
+      "visibility": "active",
+      "title": null,
+      "active_pack": "f0aee84a0c1ad096280d81c8:v1"
+    }
+  },
+  "pack_versions": [
+    {
+      "id": "f0aee84a0c1ad096280d81c8:v1",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "version": 1,
+      "mode": "local",
+      "kind": "ordinary",
+      "origin_item_id": null,
+      "summary": "Source excerpts: Photosynthesis is the process by which plants convert light energy into stored chemical energy. Chlorophyll is a green pigment that absorbs light used in photosynthesis. Chloroplasts are the organelles where photosynthesis occurs in plant cells.",
+      "topics": [
+        "Photosynthesis",
+        "Cellular Respiration",
+        "Transport Across Membranes"
+      ],
+      "question_ids": [
+        "f0aee84a0c1ad096280d81c8_q1",
+        "f0aee84a0c1ad096280d81c8_q2",
+        "f0aee84a0c1ad096280d81c8_q3",
+        "f0aee84a0c1ad096280d81c8_q4",
+        "f0aee84a0c1ad096280d81c8_q5",
+        "f0aee84a0c1ad096280d81c8_q6",
+        "f0aee84a0c1ad096280d81c8_q7",
+        "f0aee84a0c1ad096280d81c8_q8",
+        "f0aee84a0c1ad096280d81c8_q9"
+      ],
+      "card_ids": [
+        "f0aee84a0c1ad096280d81c8_c1",
+        "f0aee84a0c1ad096280d81c8_c2",
+        "f0aee84a0c1ad096280d81c8_c3",
+        "f0aee84a0c1ad096280d81c8_c4",
+        "f0aee84a0c1ad096280d81c8_c5",
+        "f0aee84a0c1ad096280d81c8_c6",
+        "f0aee84a0c1ad096280d81c8_c7",
+        "f0aee84a0c1ad096280d81c8_c8",
+        "f0aee84a0c1ad096280d81c8_c9"
+      ],
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "selected_source_ids": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "quality": {
+        "source_references": "validated",
+        "local_keys": "validated",
+        "semantic_review": "not performed",
+        "authored_review": false,
+        "question_count": 9,
+        "card_count": 9
+      },
+      "requested_count": 9,
+      "requested_difficulty": "mixed",
+      "created_at": "2026-10-24T09:00:00+00:00"
+    }
+  ],
+  "activity_events": [
+    {
+      "id": "84e916d6-ba9f-40fd-b65c-d210ce0301fb",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q1",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    },
+    {
+      "id": "4b18227f-3744-473f-bbef-f6dfe18078a0",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q2",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    },
+    {
+      "id": "1094db7f-b4ba-4419-8911-99cf484155fd",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q3",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    },
+    {
+      "id": "f59f69fe-6d09-45f2-9301-931091eea233",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q4",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    },
+    {
+      "id": "3ca1373a-4ab9-435d-b89d-26f211360ba2",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q5",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    },
+    {
+      "id": "6d74374b-5af6-4738-bf31-6da46f6f7533",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q6",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    },
+    {
+      "id": "5e3caad7-b9d2-43ca-bc81-ce3650c55e32",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q7",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    },
+    {
+      "id": "81ad3e39-426b-4bce-bb0d-1fd36d651606",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q8",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    },
+    {
+      "id": "efd55b59-407d-4b73-92b9-1221bd1fc56c",
+      "learner": "My learning",
+      "material_id": "f0aee84a0c1ad096280d81c8",
+      "activity_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "item_id": "f0aee84a0c1ad096280d81c8_q9",
+      "kind": "present",
+      "value": null,
+      "at": "2026-10-24T09:00:00+00:00"
+    }
+  ],
+  "item_status": {},
+  "drafts": [],
+  "preferences": {
+    "last_material": "f0aee84a0c1ad096280d81c8",
+    "use_ai": false
+  },
+  "command_receipts": [],
+  "documents": [
+    {
+      "id": "f0aee84a0c1ad096280d81c8",
+      "title": "Cell Biology — lecture notes",
+      "filename": "demo-notes.md",
+      "text": "# Cell Energy: Study Notes\n\n## PHOTOSYNTHESIS\nPhotosynthesis is the process by which plants convert light energy into stored chemical energy.\nChlorophyll is a green pigment that absorbs light used in photosynthesis.\nChloroplasts are the organelles where photosynthesis occurs in plant cells.\nThe raw materials for photosynthesis are carbon dioxide and water. The products include glucose and oxygen.\nLight-dependent reactions take place in the thylakoid membranes of chloroplasts.\n\n## CELLULAR RESPIRATION\nCellular respiration releases usable energy from glucose.\nAerobic respiration requires oxygen and produces carbon dioxide, water and ATP.\nMitochondria are the main sites of aerobic respiration in eukaryotic cells.\nGlycolysis occurs in the cytoplasm and breaks glucose into smaller molecules.\nATP is a molecule that transfers usable energy to many cellular processes.\nPhotosynthesis stores energy while cellular respiration releases energy that cells can use.\n\n## TRANSPORT ACROSS MEMBRANES\nDiffusion is the net movement of particles from a region of higher concentration to a region of lower concentration.\nOsmosis is the net movement of water across a selectively permeable membrane toward the region with lower water potential.\nActive transport moves substances against their concentration gradient and requires cellular energy.\nA selectively permeable membrane allows some substances to cross more easily than others.\nDiffusion and osmosis are passive processes and do not require a direct input of ATP.",
+      "chunks": [
+        {
+          "id": "s1",
+          "text": "Photosynthesis is the process by which plants convert light energy into stored chemical energy. Chlorophyll is a green pigment that absorbs light used in photosynthesis. Chloroplasts are the organelles where photosynthesis occurs in plant cells. The raw materials for photosynthesis are carbon dioxide and water. The products include glucose and oxygen. Light-dependent reactions take place in the thylakoid membranes of chloroplasts.",
+          "page": null,
+          "section": "Photosynthesis"
+        },
+        {
+          "id": "s2",
+          "text": "Cellular respiration releases usable energy from glucose. Aerobic respiration requires oxygen and produces carbon dioxide, water and ATP. Mitochondria are the main sites of aerobic respiration in eukaryotic cells. Glycolysis occurs in the cytoplasm and breaks glucose into smaller molecules. ATP is a molecule that transfers usable energy to many cellular processes. Photosynthesis stores energy while cellular respiration releases energy that cells can use.",
+          "page": null,
+          "section": "Cellular Respiration"
+        },
+        {
+          "id": "s3",
+          "text": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration. Osmosis is the net movement of water across a selectively permeable membrane toward the region with lower water potential. Active transport moves substances against their concentration gradient and requires cellular energy. A selectively permeable membrane allows some substances to cross more easily than others. Diffusion and osmosis are passive processes and do not require a direct input of ATP.",
+          "page": null,
+          "section": "Transport Across Membranes"
+        }
+      ],
+      "summary": "Source excerpts: Photosynthesis is the process by which plants convert light energy into stored chemical energy. Chlorophyll is a green pigment that absorbs light used in photosynthesis. Chloroplasts are the organelles where photosynthesis occurs in plant cells.",
+      "topics": [
+        "Photosynthesis",
+        "Cellular Respiration",
+        "Transport Across Membranes"
+      ],
+      "questions": [
+        {
+          "prompt": "Complete this statement from your notes:\n\n____ is the process by which plants convert light energy into stored chemical energy.",
+          "topic": "Photosynthesis",
+          "options": [
+            "Diffusion",
+            "energy",
+            "Chlorophyll",
+            "Photosynthesis"
+          ],
+          "correct_index": 3,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “P” and has 1 word(s)."
+          ],
+          "explanation": "The source states: Photosynthesis is the process by which plants convert light energy into stored chemical energy.",
+          "source_chunk_id": "s1",
+          "evidence_quote": "Photosynthesis is the process by which plants convert light energy into stored chemical energy.",
+          "id": "f0aee84a0c1ad096280d81c8_q1"
+        },
+        {
+          "prompt": "Complete this statement from your notes:\n\nCellular respiration releases usable ____ from glucose.",
+          "topic": "Cellular Respiration",
+          "options": [
+            "energy",
+            "Chlorophyll",
+            "Diffusion",
+            "Photosynthesis"
+          ],
+          "correct_index": 0,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “e” and has 1 word(s)."
+          ],
+          "explanation": "The source states: Cellular respiration releases usable energy from glucose.",
+          "source_chunk_id": "s2",
+          "evidence_quote": "Cellular respiration releases usable energy from glucose.",
+          "id": "f0aee84a0c1ad096280d81c8_q2"
+        },
+        {
+          "prompt": "Complete this statement from your notes:\n\n____ is the net movement of particles from a region of higher concentration to a region of lower concentration.",
+          "topic": "Transport Across Membranes",
+          "options": [
+            "Diffusion",
+            "Chlorophyll",
+            "energy",
+            "Photosynthesis"
+          ],
+          "correct_index": 0,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “D” and has 1 word(s)."
+          ],
+          "explanation": "The source states: Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration.",
+          "source_chunk_id": "s3",
+          "evidence_quote": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration.",
+          "id": "f0aee84a0c1ad096280d81c8_q3"
+        },
+        {
+          "prompt": "Complete this statement from your notes:\n\n____ is a green pigment that absorbs light used in photosynthesis.",
+          "topic": "Photosynthesis",
+          "options": [
+            "Chlorophyll",
+            "Photosynthesis",
+            "energy",
+            "Diffusion"
+          ],
+          "correct_index": 0,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “C” and has 1 word(s)."
+          ],
+          "explanation": "The source states: Chlorophyll is a green pigment that absorbs light used in photosynthesis.",
+          "source_chunk_id": "s1",
+          "evidence_quote": "Chlorophyll is a green pigment that absorbs light used in photosynthesis.",
+          "id": "f0aee84a0c1ad096280d81c8_q4"
+        },
+        {
+          "prompt": "Complete this statement from your notes:\n\nAerobic ____ requires oxygen and produces carbon dioxide, water and ATP.",
+          "topic": "Cellular Respiration",
+          "options": [
+            "energy",
+            "Diffusion",
+            "respiration",
+            "Photosynthesis"
+          ],
+          "correct_index": 2,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “r” and has 1 word(s)."
+          ],
+          "explanation": "The source states: Aerobic respiration requires oxygen and produces carbon dioxide, water and ATP.",
+          "source_chunk_id": "s2",
+          "evidence_quote": "Aerobic respiration requires oxygen and produces carbon dioxide, water and ATP.",
+          "id": "f0aee84a0c1ad096280d81c8_q5"
+        },
+        {
+          "prompt": "Complete this statement from your notes:\n\n____ is the net movement of water across a selectively permeable membrane toward the region with lower water potential.",
+          "topic": "Transport Across Membranes",
+          "options": [
+            "Diffusion",
+            "energy",
+            "Osmosis",
+            "Photosynthesis"
+          ],
+          "correct_index": 2,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “O” and has 1 word(s)."
+          ],
+          "explanation": "The source states: Osmosis is the net movement of water across a selectively permeable membrane toward the region with lower water potential.",
+          "source_chunk_id": "s3",
+          "evidence_quote": "Osmosis is the net movement of water across a selectively permeable membrane toward the region with lower water potential.",
+          "id": "f0aee84a0c1ad096280d81c8_q6"
+        },
+        {
+          "prompt": "Complete this statement from your notes:\n\n____ are the organelles where photosynthesis occurs in plant cells.",
+          "topic": "Photosynthesis",
+          "options": [
+            "energy",
+            "Photosynthesis",
+            "Chloroplasts",
+            "Diffusion"
+          ],
+          "correct_index": 2,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “C” and has 1 word(s)."
+          ],
+          "explanation": "The source states: Chloroplasts are the organelles where photosynthesis occurs in plant cells.",
+          "source_chunk_id": "s1",
+          "evidence_quote": "Chloroplasts are the organelles where photosynthesis occurs in plant cells.",
+          "id": "f0aee84a0c1ad096280d81c8_q7"
+        },
+        {
+          "prompt": "Complete this statement from your notes:\n\n____ are the main sites of aerobic respiration in eukaryotic cells.",
+          "topic": "Cellular Respiration",
+          "options": [
+            "energy",
+            "Diffusion",
+            "Mitochondria",
+            "Photosynthesis"
+          ],
+          "correct_index": 2,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “M” and has 1 word(s)."
+          ],
+          "explanation": "The source states: Mitochondria are the main sites of aerobic respiration in eukaryotic cells.",
+          "source_chunk_id": "s2",
+          "evidence_quote": "Mitochondria are the main sites of aerobic respiration in eukaryotic cells.",
+          "id": "f0aee84a0c1ad096280d81c8_q8"
+        },
+        {
+          "prompt": "Complete this statement from your notes:\n\nA ____ permeable membrane allows some substances to cross more easily than others.",
+          "topic": "Transport Across Membranes",
+          "options": [
+            "energy",
+            "Photosynthesis",
+            "selectively",
+            "Diffusion"
+          ],
+          "correct_index": 2,
+          "difficulty": "easy",
+          "hints": [
+            "Recall cue: read the statement around the blank and recall its subject. This cue does not explain the concept.",
+            "The missing term starts with “s” and has 1 word(s)."
+          ],
+          "explanation": "The source states: A selectively permeable membrane allows some substances to cross more easily than others.",
+          "source_chunk_id": "s3",
+          "evidence_quote": "A selectively permeable membrane allows some substances to cross more easily than others.",
+          "id": "f0aee84a0c1ad096280d81c8_q9"
+        }
+      ],
+      "mode": "local",
+      "created_at": "2026-10-24T09:00:00+00:00"
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "question_ids": [
+        "f0aee84a0c1ad096280d81c8_q1",
+        "f0aee84a0c1ad096280d81c8_q2",
+        "f0aee84a0c1ad096280d81c8_q3",
+        "f0aee84a0c1ad096280d81c8_q4",
+        "f0aee84a0c1ad096280d81c8_q5",
+        "f0aee84a0c1ad096280d81c8_q6",
+        "f0aee84a0c1ad096280d81c8_q7",
+        "f0aee84a0c1ad096280d81c8_q8",
+        "f0aee84a0c1ad096280d81c8_q9"
+      ],
+      "completed": true,
+      "created_at": "2026-10-24T09:00:00+00:00"
+    }
+  ],
+  "attempts": [
+    {
+      "id": "sample-answer-0",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q1",
+      "selected_index": 0,
+      "correct": false,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:01:00+00:00"
+    },
+    {
+      "id": "sample-answer-1",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q2",
+      "selected_index": 0,
+      "correct": true,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:02:00+00:00"
+    },
+    {
+      "id": "sample-answer-2",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q3",
+      "selected_index": 0,
+      "correct": true,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:03:00+00:00"
+    },
+    {
+      "id": "sample-answer-3",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q4",
+      "selected_index": 1,
+      "correct": false,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:04:00+00:00"
+    },
+    {
+      "id": "sample-answer-4",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q5",
+      "selected_index": 2,
+      "correct": true,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:05:00+00:00"
+    },
+    {
+      "id": "sample-answer-5",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q6",
+      "selected_index": 2,
+      "correct": true,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:06:00+00:00"
+    },
+    {
+      "id": "sample-answer-6",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q7",
+      "selected_index": 3,
+      "correct": false,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:07:00+00:00"
+    },
+    {
+      "id": "sample-answer-7",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q8",
+      "selected_index": 2,
+      "correct": true,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:08:00+00:00"
+    },
+    {
+      "id": "sample-answer-8",
+      "quiz_id": "356780c8-9bee-4be6-af6d-ea2716499d8c",
+      "question_id": "f0aee84a0c1ad096280d81c8_q9",
+      "selected_index": 2,
+      "correct": true,
+      "hint_count": 0,
+      "answered_at": "2026-10-24T09:09:00+00:00"
+    }
+  ],
+  "cards": [
+    {
+      "front": "Recall the missing term: ____ is the process by which plants convert light energy into stored chemical energy.",
+      "back": "Photosynthesis\n\nPhotosynthesis is the process by which plants convert light energy into stored chemical energy.",
+      "topic": "Photosynthesis",
+      "source_chunk_id": "s1",
+      "evidence_quote": "Photosynthesis is the process by which plants convert light energy into stored chemical energy.",
+      "id": "f0aee84a0c1ad096280d81c8_c1",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-25T10:00:00+00:00",
+      "step": 1,
+      "review_count": 1
+    },
+    {
+      "front": "Recall the missing term: Cellular respiration releases usable ____ from glucose.",
+      "back": "energy\n\nCellular respiration releases usable energy from glucose.",
+      "topic": "Cellular Respiration",
+      "source_chunk_id": "s2",
+      "evidence_quote": "Cellular respiration releases usable energy from glucose.",
+      "id": "f0aee84a0c1ad096280d81c8_c2",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-25T10:00:00+00:00",
+      "step": 0,
+      "review_count": 1
+    },
+    {
+      "front": "Recall the missing term: ____ is the net movement of particles from a region of higher concentration to a region of lower concentration.",
+      "back": "Diffusion\n\nDiffusion is the net movement of particles from a region of higher concentration to a region of lower concentration.",
+      "topic": "Transport Across Membranes",
+      "source_chunk_id": "s3",
+      "evidence_quote": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration.",
+      "id": "f0aee84a0c1ad096280d81c8_c3",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-24T10:10:00+00:00",
+      "step": 0,
+      "review_count": 1
+    },
+    {
+      "front": "Recall the missing term: ____ is a green pigment that absorbs light used in photosynthesis.",
+      "back": "Chlorophyll\n\nChlorophyll is a green pigment that absorbs light used in photosynthesis.",
+      "topic": "Photosynthesis",
+      "source_chunk_id": "s1",
+      "evidence_quote": "Chlorophyll is a green pigment that absorbs light used in photosynthesis.",
+      "id": "f0aee84a0c1ad096280d81c8_c4",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-24T09:00:00+00:00",
+      "step": 0,
+      "review_count": 0
+    },
+    {
+      "front": "Recall the missing term: Aerobic ____ requires oxygen and produces carbon dioxide, water and ATP.",
+      "back": "respiration\n\nAerobic respiration requires oxygen and produces carbon dioxide, water and ATP.",
+      "topic": "Cellular Respiration",
+      "source_chunk_id": "s2",
+      "evidence_quote": "Aerobic respiration requires oxygen and produces carbon dioxide, water and ATP.",
+      "id": "f0aee84a0c1ad096280d81c8_c5",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-24T09:00:00+00:00",
+      "step": 0,
+      "review_count": 0
+    },
+    {
+      "front": "Recall the missing term: ____ is the net movement of water across a selectively permeable membrane toward the region with lower water potential.",
+      "back": "Osmosis\n\nOsmosis is the net movement of water across a selectively permeable membrane toward the region with lower water potential.",
+      "topic": "Transport Across Membranes",
+      "source_chunk_id": "s3",
+      "evidence_quote": "Osmosis is the net movement of water across a selectively permeable membrane toward the region with lower water potential.",
+      "id": "f0aee84a0c1ad096280d81c8_c6",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-24T09:00:00+00:00",
+      "step": 0,
+      "review_count": 0
+    },
+    {
+      "front": "Recall the missing term: ____ are the organelles where photosynthesis occurs in plant cells.",
+      "back": "Chloroplasts\n\nChloroplasts are the organelles where photosynthesis occurs in plant cells.",
+      "topic": "Photosynthesis",
+      "source_chunk_id": "s1",
+      "evidence_quote": "Chloroplasts are the organelles where photosynthesis occurs in plant cells.",
+      "id": "f0aee84a0c1ad096280d81c8_c7",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-24T09:00:00+00:00",
+      "step": 0,
+      "review_count": 0
+    },
+    {
+      "front": "Recall the missing term: ____ are the main sites of aerobic respiration in eukaryotic cells.",
+      "back": "Mitochondria\n\nMitochondria are the main sites of aerobic respiration in eukaryotic cells.",
+      "topic": "Cellular Respiration",
+      "source_chunk_id": "s2",
+      "evidence_quote": "Mitochondria are the main sites of aerobic respiration in eukaryotic cells.",
+      "id": "f0aee84a0c1ad096280d81c8_c8",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-24T09:00:00+00:00",
+      "step": 0,
+      "review_count": 0
+    },
+    {
+      "front": "Recall the missing term: A ____ permeable membrane allows some substances to cross more easily than others.",
+      "back": "selectively\n\nA selectively permeable membrane allows some substances to cross more easily than others.",
+      "topic": "Transport Across Membranes",
+      "source_chunk_id": "s3",
+      "evidence_quote": "A selectively permeable membrane allows some substances to cross more easily than others.",
+      "id": "f0aee84a0c1ad096280d81c8_c9",
+      "document_id": "f0aee84a0c1ad096280d81c8",
+      "due_at": "2026-10-24T09:00:00+00:00",
+      "step": 0,
+      "review_count": 0
+    }
+  ],
+  "reviews": [
+    {
+      "id": "sample-card-0",
+      "card_id": "f0aee84a0c1ad096280d81c8_c1",
+      "rating": "Good",
+      "reviewed_at": "2026-10-24T10:00:00+00:00"
+    },
+    {
+      "id": "sample-card-1",
+      "card_id": "f0aee84a0c1ad096280d81c8_c2",
+      "rating": "Hard",
+      "reviewed_at": "2026-10-24T10:00:00+00:00"
+    },
+    {
+      "id": "sample-card-2",
+      "card_id": "f0aee84a0c1ad096280d81c8_c3",
+      "rating": "Again",
+      "reviewed_at": "2026-10-24T10:00:00+00:00"
+    }
+  ],
+  "nlm": {
+    "pack_version": 1,
+    "installed": true,
+    "sessions": [
+      {
+        "id": "11200629-df01-4d37-ac24-5ae50835a1aa",
+        "learner": "My learning",
+        "question_id": "inertia-1",
+        "created_at": "2026-10-25T09:00:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-0",
+            "action": "answer",
+            "answer": 1,
+            "at": "2026-10-25T09:00:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "8d3c3977-e44b-4e9d-a3f2-b8dd168e8989",
+        "learner": "My learning",
+        "question_id": "inertia-2",
+        "created_at": "2026-10-25T09:01:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-1",
+            "action": "answer",
+            "answer": 3,
+            "at": "2026-10-25T09:01:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "d8aad34c-8c00-43c6-901b-d84cca6573c5",
+        "learner": "My learning",
+        "question_id": "inertia-3",
+        "created_at": "2026-10-25T09:02:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-2",
+            "action": "answer",
+            "answer": 2,
+            "at": "2026-10-25T09:02:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "761d33dc-8a76-4f3b-8c0d-5b6f7ac21a87",
+        "learner": "My learning",
+        "question_id": "second-1",
+        "created_at": "2026-10-25T09:03:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-3",
+            "action": "answer",
+            "answer": 0,
+            "at": "2026-10-25T09:03:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "10dade2c-65bf-482d-a452-bad1a35d39ff",
+        "learner": "My learning",
+        "question_id": "second-2",
+        "created_at": "2026-10-25T09:04:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-4",
+            "action": "answer",
+            "answer": 2,
+            "at": "2026-10-25T09:04:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "fae155e4-6c99-42f0-bde6-1de92bb34e06",
+        "learner": "My learning",
+        "question_id": "second-3",
+        "created_at": "2026-10-25T09:05:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-5",
+            "action": "answer",
+            "answer": 1,
+            "at": "2026-10-25T09:05:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "689fd80a-3a83-4b48-9063-2a69c6126416",
+        "learner": "My learning",
+        "question_id": "third-1",
+        "created_at": "2026-10-25T09:06:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-6",
+            "action": "answer",
+            "answer": 3,
+            "at": "2026-10-25T09:06:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "ff3fbb94-92e9-4488-8ebb-26ac2475367b",
+        "learner": "My learning",
+        "question_id": "third-2",
+        "created_at": "2026-10-25T09:07:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-7",
+            "action": "answer",
+            "answer": 1,
+            "at": "2026-10-25T09:07:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "adb11236-3fa8-4687-aeb5-a0b6e290f0bb",
+        "learner": "My learning",
+        "question_id": "third-3",
+        "created_at": "2026-10-25T09:08:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-8",
+            "action": "answer",
+            "answer": 0,
+            "at": "2026-10-25T09:08:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "89e8b9fb-927d-4d3b-8c44-88ff1abd8beb",
+        "learner": "My learning",
+        "question_id": "normal-1",
+        "created_at": "2026-10-25T09:09:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-9",
+            "action": "answer",
+            "answer": 2,
+            "at": "2026-10-25T09:09:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "d3739511-b96f-42a0-a08a-7c2fc1333fb6",
+        "learner": "My learning",
+        "question_id": "normal-2",
+        "created_at": "2026-10-25T09:10:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-10",
+            "action": "answer",
+            "answer": 0,
+            "at": "2026-10-25T09:10:00+00:00",
+            "revision": 0
+          }
+        ]
+      },
+      {
+        "id": "fcd3432f-20e9-470d-8e3a-c4090b867414",
+        "learner": "My learning",
+        "question_id": "normal-3",
+        "created_at": "2026-10-25T09:11:00+00:00",
+        "events": [
+          {
+            "id": "sample-newton-11",
+            "action": "answer",
+            "answer": 3,
+            "at": "2026-10-25T09:11:00+00:00",
+            "revision": 0
+          }
+        ]
+      }
+    ],
+    "reviews": []
+  },
+  "debugger": {
+    "content_version": 1,
+    "history": {},
+    "episodes": []
+  },
+  "practice_events": []
+}

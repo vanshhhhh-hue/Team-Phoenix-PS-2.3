@@ -1,9 +1,9 @@
 [theme]
 base = "light"
-primaryColor = "#087f74"
-backgroundColor = "#f7f8fa"
-secondaryBackgroundColor = "#edf1f5"
-textColor = "#17253d"
+primaryColor = "#596747"
+backgroundColor = "#f3efe5"
+secondaryBackgroundColor = "#eae7dc"
+textColor = "#34382f"
 font = "sans serif"
 
 [browser]
@@ -13,3 +13,17 @@ gatherUsageStats = false
 headless = true
 address = "127.0.0.1"
 maxUploadSize = 10
+
+[client]
+toolbarMode = "minimal"
+
+[theme.dark]
+primaryColor = "#126B60"
+backgroundColor = "#F6F7F9"
+secondaryBackgroundColor = "#EDF1F5"
+textColor = "#17212B"
+
+[theme.dark.sidebar]
+backgroundColor = "#EDF1F5"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#17212B"

@@ -15,3 +15,21 @@ dist/
 progress*.json
 exports/
 .local/
+
+# Local agent coordination and delivery notes; retain on this machine.
+/AGENTS.md
+/docs/engineering/AGENT_RULES.md
+/docs/engineering/PROJECT.md
+/docs/engineering/TASKS.md
+/docs/engineering/HANDOFF.md
+/docs/engineering/VERIFICATION.md
+/Start-Lab.cmd
+/Start-Phoenix-Study.cmd
+
+# Generated output and presentation/review artifacts.
+/output/
+/prompts/
+/project-support/
+*.zip
+*.ppt
+*.pptx
